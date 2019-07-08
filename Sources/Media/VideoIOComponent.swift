@@ -329,6 +329,9 @@ final class VideoIOComponent: IOComponent {
             if connection.isVideoOrientationSupported {
                 connection.videoOrientation = orientation
             }
+            if connection.isVideoMirroringSupported {
+              connection.isVideoMirrored = false
+            }
             #if os(iOS)
             connection.preferredVideoStabilizationMode = preferredVideoStabilizationMode
             #endif
